@@ -5,6 +5,7 @@ import { Assets } from "@/assets/images";
 import { colors } from "../constants/colors";
 import { Link, useNavigation } from "@react-navigation/native";
 import { mainStyles } from "../styles/Main";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function SignUpChoiceScreen() {
   const navigation = useNavigation<any>();
@@ -12,7 +13,7 @@ export default function SignUpChoiceScreen() {
   const [emailSigninVisible, setEmailSigninVisible] = useState(false);
 
   return (
-    <View style={styles.mainContainer}>
+    <SafeAreaView style={styles.mainContainer}>
       <View style={styles.headerLink}>
         <Link params={{}} screen="SignIn" style={{ color: "black" }}>
           Sign in
@@ -90,7 +91,7 @@ export default function SignUpChoiceScreen() {
           </Text>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
 
